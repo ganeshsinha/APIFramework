@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: runner.RunCucumberTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.777 sec <<< FAILURE!
+Create a new post for a user(JSONPlaceholder API Testing)  Time elapsed: 0.024 sec  <<< ERROR!
+io.cucumber.datatable.CucumberDataTableException: Can't convert DataTable to Map<java.lang.String, java.lang.String>.
+There is more then one value per key. Did you mean to transform to Map<java.lang.String, List<java.lang.String>> instead?
+	at io.cucumber.datatable.CucumberDataTableException.cantConvertToMap(CucumberDataTableException.java:27)
+	at io.cucumber.datatable.CucumberDataTableException.keyValueMismatchException(CucumberDataTableException.java:47)
+	at io.cucumber.datatable.DataTableTypeRegistryTableConverter.toMap(DataTableTypeRegistryTableConverter.java:282)
+	at io.cucumber.datatable.DataTable.asMap(DataTable.java:278)
+	at steps.ApiSteps.createJsonFromDataTable(ApiSteps.java:63)
+	at steps.ApiSteps.iSendAPOSTRequestToWithBody(ApiSteps.java:33)
+	at ✽.I send a POST request to "/posts" with body:(file:///C:/affordablehousing/APIFramework/src/test/resources/features/user_api.feature:9)
+
